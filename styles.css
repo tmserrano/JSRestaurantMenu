@@ -1,0 +1,219 @@
+/* general Tags */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* navbar */
+.navi {
+  padding: 0px;
+  margin: 10px;
+}
+
+/* sections */
+.main__section {
+  background-image: url(images/rico_piteu_main.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.main__section .container-fluid {
+  padding: 1% 7% 4%;
+}
+
+.footer__section,
+.about__section,
+.schedule__section {
+  background-color: white;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu__section {
+  background-image: url(images/rico_piteu_menu.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Fonts,icons and btns styles */
+.colored-text {
+  color: #cca45f;
+}
+
+.scroll__icon--down {
+  border: 2px solid white;
+  width: 30px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50px;
+  opacity: 0.9;
+}
+.scroll__icon--up {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50px;
+  opacity: 0;
+}
+
+.sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: 0.5s ease-in-out;
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 999;
+}
+
+@keyframes scroll_animation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+.scrollIcon__dot {
+  background-color: white;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  margin-left: 40%;
+  margin-top: 8px;
+  animation: scroll_animation 2s ease-out infinite;
+}
+
+.btn-outline-light {
+  border-radius: 50px;
+  border: 2px solid #cca45f;
+  padding: 8px 20px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.btn-outline-light:hover {
+  background-color: #cca45f;
+  border-color: #cca45f;
+  color: white;
+  transition: 0.5s;
+}
+.btn-done {
+  background-color: #cca45f;
+}
+.btn-done:hover {
+  background-color: white;
+  border-color: #cca45f;
+  color: #cca45f;
+  transition: 0.5s;
+}
+
+.btn-close:focus,
+.btn-menu:focus,
+.btn-login:focus {
+  border-color: none;
+  box-shadow: none;
+}
+
+/* Login | SignUp*/
+.modalfade {
+  animation: fade 0.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.form-control:focus {
+  border-color: #cca45f;
+  box-shadow: 0 0 0 0.2rem rgba(204, 164, 95, 0.25);
+}
+
+/* about section */
+.aboutSection__img {
+  transform: rotate(-10deg);
+  border: 15px solid rgba(204, 164, 95, 0.1);
+  width: 90%;
+  box-shadow: 20px 20px 15px 12px #333;
+}
+
+/* menu section */
+.menuSection__img {
+  height: 275px;
+}
+
+/* footer */
+.fa {
+  width: 25px;
+}
+
+.footerSection__logo {
+  width: 150px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .scrollIcon__div {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .menuSection__img {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutSection__img {
+    transform: rotate(0deg);
+    width: 100%;
+    box-shadow: 10px 10px 7px 6px #333;
+    margin: 0;
+  }
+  .menuSection__img {
+    height: 300px;
+  }
+  .footerSection__newsletter,
+  .footerSection__rest {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menuSection__img {
+    height: 200px;
+  }
+}
